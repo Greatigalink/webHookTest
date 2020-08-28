@@ -1,0 +1,130 @@
+﻿<!DOCTYPE html>
+  <head>
+    <link rel="stylesheet" href="https://unpkg.com/element-ui/lib/theme-chalk/index.css">
+  </head>
+  <body>
+    <div id="image-play">
+      <article class="image-list">
+        <ul id="screen-image">
+          <li><img src="http://101.37.83.157:3000/images/backimg/back1.jpg"/></li>
+          <li><img src="http://101.37.83.157:3000/art/other/blogsetup/31001/323081.jpg"/></li>
+          <li><img src="http://101.37.83.157:3000/images/backimg/pchome.jpg"/></li>
+          <li><img src="http://101.37.83.157:3000/images/backimg/sky.jpg"/></li>
+          <li><img src="http://101.37.83.157:3000/images/backimg/back1.jpg"/></li>
+        </ul>
+      </article>
+      <aside class="left" onclick="leftRight(-1)">
+        <i class="el-icon-arrow-left" ></i>
+      </aside>
+      <aside class="right" onclick="leftRight(1)">
+        <i class="el-icon-arrow-right"></i>
+      </aside>
+    </div>
+    <footer id="foot-button">
+      <ul>
+        <li onclick="clickPage(0)"><i class="el-icon-minus"></i></li>
+        <li onclick="clickPage(1)"><i class="el-icon-minus"></i></li>
+        <li onclick="clickPage(2)"><i class="el-icon-minus"></i></li>
+        <li onclick="clickPage(3)"><i class="el-icon-minus"></i></li>
+      </ul>
+    </footer>
+  </body>
+  <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+  <script src="https://unpkg.com/element-ui/lib/index.js"></script>
+  <script src="./play.js"></script>
+  <style>
+    i {
+      font-size: 70px;
+      cursor: pointer;
+      color: #212121;
+    }
+    img {
+      width: 1000px;
+      height: 480px;
+    }
+    #image-play {
+      position: relative;
+      width: 100%;
+      height: 480px;
+    }
+    #screen-image {
+      position: absolute;
+      top: 0px;
+      left: 0px;
+      width: 5000px;
+      margin: 0px;
+      padding: 0px;
+      list-style: none;
+    }
+    #screen-image li {
+      float: left;
+      width: 20%;
+    }
+    #foot-button ul{
+      margin: 0px;
+      padding: 0px;
+      text-align: center;
+      list-style: none;
+    }
+    #foot-button li {
+      display: inline-block;
+    }
+    #foot-button i {
+      color: #757575;
+    }
+    .image-list {
+      position: relative;
+      margin: 0px 18% 0px 18%;
+      height: 100%;
+      overflow: hidden;
+    }
+    .left {
+      position: absolute;
+      top: 190px;
+      left: 120px;
+    }
+    .right {
+      position: absolute;
+      top: 190px;
+      right: 120px;
+    }
+    @media screen and (max-width: 950px) and (min-width: 450px){
+      #image-play {
+        height: 380px;
+      }
+      img {
+        height: 380px;
+      }
+      .image-list {
+        margin: 0px 3% 0px 3%;
+      }
+      .left {
+        top: 150px;
+        left: 20px;
+      }
+      .right {
+        top: 150px;
+        right: 20px;
+      }
+    }
+    @media screen and (max-width: 450px) {
+      #image-play {
+        height: 270px;
+      }
+      img {
+        height: 270px;
+      }
+      .image-list {
+        margin: 0px;
+      }
+      .left {
+        top: 100px;
+        left: 20px;
+      }
+      .right {
+        top: 100px;
+        right: 20px;
+      }
+    }
+  </style>
+<html>
